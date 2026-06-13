@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elizabeth Eisenhauer Adamson — Research Interests</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #faf8f5;
+      --surface:   #ffffff;
+      --ink:       #2b2620;
+      --ink-mid:   #5c5249;
+      --ink-light: #9c9189;
+      --teal:      #2a7a6f;
+      --teal-lt:   #e6f3f1;
+      --teal-mid:  #c8e6e2;
+      --warm-rule: rgba(92, 82, 73, 0.13);
+      --radius:    10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    /* Hero */
+    .hero {
+      background: var(--surface);
+      border-bottom: 1px solid var(--warm-rule);
+      padding: 4rem 2rem 3.25rem;
+    }
+    .hero-inner { max-width: 700px; margin: 0 auto; }
+
+    .greeting {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1.1rem;
+    }
+    h1 {
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(1.8rem, 4.5vw, 2.65rem);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+    }
+    h1 em { font-style: italic; }
+
+    .hero-text {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--ink-mid);
+      line-height: 1.82;
+      max-width: 60ch;
+    }
+    .hero-text strong { font-weight: 500; color: var(--ink); }
+
+    /* Connect banner */
+    .connect-banner {
+      background: var(--teal-lt);
+      border: 1px solid var(--teal-mid);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.6rem;
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      flex-wrap: wrap;
+    }
+    .connect-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .connect-text { flex: 1; min-width: 200px; }
+    .connect-text p { font-size: 0.91rem; color: var(--ink-mid); line-height: 1.65; }
+    .connect-text p strong { color: var(--teal); font-weight: 500; }
+    .connect-btn {
+      display: inline-block;
+      background: var(--teal);
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 0.58rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background 0.18s, transform 0.12s;
+    }
+    .connect-btn:hover { background: #1f6158; transform: translateY(-1px); }
+
+    /* Profile links */
+    .profile-links {
+      margin-top: 1.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .profile-link {
+      font-size: 0.81rem;
+      color: var(--ink-mid);
+      text-decoration: none;
+      padding: 0.28rem 0.8rem;
+      border: 1px solid var(--warm-rule);
+      border-radius: 20px;
+      background: var(--bg);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .profile-link:hover { border-color: var(--teal); color: var(--teal); }
+
+    /* Main */
+    main { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    .section-header { margin-bottom: 1.6rem; }
+    .section-header h2 {
+      font-family: "Lora", Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+    .section-header p { font-size: 0.875rem; color: var(--ink-light); line-height: 1.6; }
+
+    /* Cards */
+    .cards { display: flex; flex-direction: column; gap: 1rem; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--warm-rule);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem 1.4rem;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 3px 18px rgba(43, 38, 32, 0.07);
+      border-color: rgba(42, 122, 111, 0.28);
+    }
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 0.65rem;
+    }
+    .card-emoji { font-size: 1.4rem; line-height: 1; margin-top: 0.1rem; flex-shrink: 0; }
+    .card h3 {
+      font-family: "Lora", Georgia, serif;
+      font-size: 1.07rem;
+      font-weight: 500;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+    .card-desc {
+      font-size: 0.875rem;
+      color: var(--ink-mid);
+      line-height: 1.72;
+      margin-bottom: 1rem;
+      padding-left: 2.3rem;
+    }
+    .link-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      padding-left: 2.3rem;
+    }
+    .link-list li a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.845rem;
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .link-list li a:hover { color: var(--teal); }
+    .link-list li a:hover .link-badge {
+      background: var(--teal-lt);
+      color: var(--teal);
+    }
+    .link-badge {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.59rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.48rem;
+      background: #f0ece7;
+      color: var(--ink-light);
+      border-radius: 4px;
+      flex-shrink: 0;
+      transition: background 0.15s, color 0.15s;
+    }
+    .no-links {
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--ink-light);
+      padding-left: 2.3rem;
+    }
+
+    /* Closing invite */
+    .closing {
+      margin-top: 2.75rem;
+      background: var(--surface);
+      border: 1px solid var(--warm-rule);
+      border-radius: var(--radius);
+      padding: 2.25rem 2rem;
+      text-align: center;
+    }
+    .closing h2 {
+      font-family: "Lora", Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.65rem;
+    }
+    .closing p {
+      font-size: 0.9rem;
+      color: var(--ink-mid);
+      line-height: 1.78;
+      max-width: 52ch;
+      margin: 0 auto 1.5rem;
+    }
+    .closing-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+    .closing-link {
+      display: inline-block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--teal);
+      text-decoration: none;
+      padding: 0.55rem 1.2rem;
+      border: 1.5px solid var(--teal);
+      border-radius: 6px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .closing-link:hover { background: var(--teal); color: #fff; }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 2rem 2.5rem;
+      font-size: 0.77rem;
+      color: var(--ink-light);
+    }
+
+    @media (max-width: 560px) {
+      .hero { padding: 2.5rem 1.25rem 2.25rem; }
+      main  { padding: 2rem 1.25rem 3.5rem; }
+      .card { padding: 1.25rem; }
+      .card-desc, .link-list, .no-links { padding-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="greeting">Hi, I'm Liz &#x1F44B;</p>
+    <h1>Research interests in<br><em>statistics, collaboration,<br>and study design</em></h1>
+    <p class="hero-text">
+      I'm a survey methodologist and statistician at Westat, working at the intersection of
+      <strong>causal inference, program evaluation, and interdisciplinary data science</strong>.
+      The areas below are directions I've been developing through webinars, talks, and writing
+      &mdash; and that I'm hoping to build more formally over time.
+    </p>
+
+    <div class="connect-banner">
+      <span class="connect-icon">&#x1F4AC;</span>
+      <div class="connect-text">
+        <p><strong>These ideas are works in progress, and I'd genuinely love to hear from you.</strong>
+        If something here overlaps with your work or curiosity, please reach out &mdash;
+        I'm always open to conversation, collaboration, or just swapping ideas.</p>
+      </div>
+      <a class="connect-btn" href="mailto:you@example.com">Get in touch</a>
+    </div>
+
+    <nav class="profile-links" aria-label="External profiles">
+      <a class="profile-link" href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar &#x2197;</a>
+      <a class="profile-link" href="https://orcid.org" target="_blank" rel="noopener">ORCID &#x2197;</a>
+      <a class="profile-link" href="https://github.com" target="_blank" rel="noopener">GitHub &#x2197;</a>
+      <a class="profile-link" href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn &#x2197;</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="section-header">
+    <h2>Active research directions</h2>
+    <p>Each area links to talks, webinars, and articles I've contributed so far.</p>
+  </div>
+
+  <div class="cards">
+
+    <article class="card">
+      <div class="card-top">
+        <span class="card-emoji">&#x1F4D0;</span>
+        <h3>Survey Statistics &amp; Causal Inference Collaboration</h3>
+      </div>
+      <p class="card-desc">
+        What happens when survey methodologists and causal inference researchers work together?
+        I'm interested in how design-based thinking and potential-outcomes frameworks
+        can inform each other &mdash; and what a unified error framework might look like.
+      </p>
+      <ul class="link-list">
+        <li>
+          <a href="#" target="_blank" rel="noopener">
+            <span class="link-badge">paper</span>
+            Toward a Total Causal Error Framework &mdash; <em>Observational Studies</em> (forthcoming)
+          </a>
+        </li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="card-emoji">&#x1F91D;</span>
+        <h3>Statistician &amp; Evaluator Collaboration</h3>
+      </div>
+      <p class="card-desc">
+        Statisticians and program evaluators often speak different languages even when working
+        on the same problem. I'm interested in how we build better bridges &mdash; through
+        shared vocabulary, collaboration structures, and professional norms.
+      </p>
+      <ul class="link-list">
+        <li>
+          <a href="#" target="_blank" rel="noopener">
+            <span class="link-badge">article</span>
+            Boundary Objects in Interdisciplinary Work
+          </a>
+        </li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="card-emoji">&#x1F52C;</span>
+        <h3>Study Design &amp; Sample Size Determination</h3>
+      </div>
+      <p class="card-desc">
+        A lot of the real inferential action happens before any data are collected.
+        I'm working on clearer frameworks for power analysis and sample size
+        in complex and observational settings.
+      </p>
+      <p class="no-links">Talks and articles coming &mdash; reach out if this intersects with your work.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="card-emoji">&#x1F310;</span>
+        <h3>Cross-Organizational Community Building</h3>
+      </div>
+      <p class="card-desc">
+        I care about building a statistics and data science community that's genuinely
+        connected across organizations &mdash; ASA, RSS, NISS-CANSSI, CWS &mdash;
+        and across career stages, disciplines, and international boundaries.
+      </p>
+      <p class="no-links">Conference sessions, committee work, and more linked soon.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="card-emoji">&#x1F4DA;</span>
+        <h3>Teaching &amp; Open Curriculum</h3>
+      </div>
+      <p class="card-desc">
+        I've developed machine learning and statistics course materials with a focus on
+        reproducibility and real data. I'm interested in open approaches to statistics
+        education that meet students where they actually are.
+      </p>
+      <p class="no-links">Course materials and resources linked soon.</p>
+    </article>
+
+    <!-- To add a new area, duplicate this block:
+    <article class="card">
+      <div class="card-top">
+        <span class="card-emoji">YOUR EMOJI</span>
+        <h3>Area Title</h3>
+      </div>
+      <p class="card-desc">What draws you to this area.</p>
+      <ul class="link-list">
+        <li><a href="URL" target="_blank" rel="noopener"><span class="link-badge">talk</span> Title</a></li>
+      </ul>
+    </article>
+    -->
+
+  </div>
+
+  <div class="closing">
+    <h2>Let's think together</h2>
+    <p>
+      None of these directions are fully formed &mdash; that's intentional.
+      If you're working on something adjacent, I'd love to hear about it.
+      The best collaborations usually start with a simple
+      &ldquo;I've been thinking about something similar.&rdquo;
+    </p>
+    <div class="closing-links">
+      <a class="closing-link" href="mailto:you@example.com">Email me</a>
+      <a class="closing-link" href="https://linkedin.com" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  Elizabeth Eisenhauer Adamson &nbsp;&middot;&nbsp; Senior Statistical Associate, Westat &nbsp;&middot;&nbsp; Updated 2025
+</footer>
+
+</body>
+</html>
